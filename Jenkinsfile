@@ -10,15 +10,15 @@ pipeline
 
     post {
         always {
-            //bat "echo always"
+            bat "echo always"
         }
 
         failure {
-            //bat "echo failure"
+            bat "echo failure"
         }
 
         success {
-           //bat "echo succes"
+           bat "echo succes"
         }
     }
     stages {
