@@ -29,8 +29,10 @@ pipeline
             }
         }       
     stage {
-        stage("Syntax check"){
-            bat "chcp 65001\n vrunner syntax-check"
+        stage("Syntax check") {
+            steps{
+                bat "chcp 65001\n vrunner syntax-check"
+            }            
         }
     } 
     }
