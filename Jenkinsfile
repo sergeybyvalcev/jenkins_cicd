@@ -27,7 +27,12 @@ pipeline
                 bat "chcp 65001\n vrunner init-dev"
                 
             }
-        }   
+        }
+        stage("Syntax sheck") {
+            steps {
+              bat "chcp 65001\n vrunner syntax-check"
+            }
+        }  
       
     }     
 }
