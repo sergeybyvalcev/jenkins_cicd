@@ -10,7 +10,9 @@ pipeline
 
     post {
         always {
-            bat "echo always"
+            allure includeProperties: false, jdk: '', results: [[path: 'out/syntax-check/allure']]
+            junit stdioRetention: 'ALL', testResults: 'out/syntax-check/junit/*.xml'
+            //bat "echo always"
         }
 
         failure {
@@ -28,7 +30,7 @@ pipeline
                 bat "chcp 65001\n vrunner init-dev"
             }
         }       
-        
+
         stage("Syntax check") {
             steps {
                 bat "chcp 65001\n vrunner syntax-check"
