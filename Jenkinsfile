@@ -24,7 +24,7 @@ pipeline
     stages {
         stage("Build test base") {
             steps {
-                bat "chcp 65001\n vrunner init-dev --v8version 8.3.23.1912 --dt C:\\1c_new_agent\\template\\1Cv8.dt --db-user Teacher --src C:\\repo\\jenkins_cicd\\src --ibconnection /F C:\\repo\\jenkins_cicd\\build\ib"                                
+                bat "chcp 65001\n vrunner init-dev --v8version 8.3.23.1912 --dt C:\\1c_new_agent\\template\\1Cv8.dt --db-user Teacher --src C:\\repo\\jenkins_cicd\\src --ibconnection /F C:\\repo\\jenkins_cicd\\build\\ib"                                
             }
         }       
          
